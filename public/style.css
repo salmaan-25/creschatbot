@@ -1,0 +1,177 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #c8c8c8;
+}
+
+.Header .logo img {
+    height: 50px; /* Adjust logo height */
+    border-radius: 50%;
+}
+
+.Header .navbar {
+    display: flex;
+}
+
+.Header .navbar a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.Header .navbar a:hover {
+    color: #2e86de;
+}
+
+/* Chatbot Container */
+.container {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+    background-image: url(/images/bot.jpg); /* Path to your background image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-size: cover; /* Make the image cover the entire container */
+    background-position: center; /* Center the image in the container */
+     /* Optional: Change text color to improve readability on a dark background */
+     height: 100vh;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Response Area */
+#response {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #ffffff37;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#response p {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+#user-input:focus {
+    border-color: #2e86de; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #276bb3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .Header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Header .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Header .navbar a {
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make button full width on small screens */
+    }
+}
